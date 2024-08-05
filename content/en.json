@@ -1,0 +1,9 @@
+{
+  "profile": {
+    "name": "Name",
+    "email": "Email",
+    "no-data": "There is no",
+    "user": "User",
+    "yet": "yet"
+  }
+}
