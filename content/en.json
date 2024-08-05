@@ -5,5 +5,9 @@
     "no-data": "There is no",
     "user": "User",
     "yet": "yet"
+  },
+  "button": {
+    "logout": "Logout",
+    "login": "Login"
   }
 }

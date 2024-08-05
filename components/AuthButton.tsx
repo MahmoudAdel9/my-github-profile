@@ -1,9 +1,11 @@
 import React from 'react'
 import { Button } from './ui/button'
 import { auth, signIn, signOut } from '@/auth'
+import { getTranslations } from 'next-intl/server'
 
 const AuthButton = async () => {
   const session = await auth()
+  const t = await getTranslations()
 
   return (
     <form
@@ -17,12 +19,18 @@ const AuthButton = async () => {
       }}
     >
       {session?.user?.name ? (
-        <Button className='bg-foreground text-background hover:bg-foreground/80'>
-          Logout
+        <Button
+          size='sm'
+          className='bg-foreground py-2 text-sm text-background hover:bg-foreground/80'
+        >
+          {t('button.logout')}
         </Button>
       ) : (
-        <Button className='bg-foreground text-background hover:bg-foreground/80'>
-          Login
+        <Button
+          size='sm'
+          className='bg-foreground py-2 text-sm text-background hover:bg-foreground/80'
+        >
+          {t('button.login')}
         </Button>
       )}
     </form>
